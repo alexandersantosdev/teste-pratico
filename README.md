@@ -5,6 +5,7 @@
         - ExpressJS
         - Axios
         - CORS
+        - Swagger-ui e swagger-autogen
 
     - Separada a lógica da rota em arquivo separado
 
@@ -14,6 +15,8 @@
 #### Como rodar o projeto?
     - Clonar o repositório
     - Rodar npm install / yarn na pasta backend para baixar as dependências do projeto
+    - Rodar yarn start ou npm start na pasta backend
+    - Para acessar a documentação da API acessar http://localhost:8080/doc
     - Na pasta frontend abrir o arquivo index.html
 
 ![Tela](https://github.com/alexandersantosdev/teste-pratico-vtrina/blob/main/tela.png)
