@@ -1,11 +1,11 @@
 {
   "name": "teste-pratico-vtrina",
   "version": "1.0.0",
-  "description": "",
+  "description": "API para pesquisa de CEP na VIACEP - projeto vtrina processo seletivo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start:dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
