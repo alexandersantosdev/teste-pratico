@@ -20,3 +20,5 @@
     - Na pasta frontend abrir o arquivo index.html
 
 ![Tela](https://github.com/alexandersantosdev/teste-pratico-vtrina/blob/main/tela.png)
+![Documentação](https://github.com/alexandersantosdev/teste-pratico-vtrina/blob/main/doc.png)
+![Documentação Retorno](https://github.com/alexandersantosdev/teste-pratico-vtrina/blob/main/doc2.png)
