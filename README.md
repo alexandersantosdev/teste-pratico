@@ -15,3 +15,5 @@
     - Clonar o repositório
     - Rodar npm install / yarn na pasta backend para baixar as dependências do projeto
     - Na pasta frontend abrir o arquivo index.html
+
+![Tela](https://github.com/alexandersantosdev/teste-pratico-vtrina/blob/main/tela.png)
