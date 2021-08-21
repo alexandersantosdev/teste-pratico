@@ -1,5 +1,5 @@
 {
-  "name": "API de pesquisa de CEP",
+  "name": "API_de_pesquisa_de_CEP",
   "version": "1.0.0",
   "description": "API para pesquisa de CEP na VIACEP - projeto vtrina segunda etapa do processo seletivo",
   "main": "index.js",

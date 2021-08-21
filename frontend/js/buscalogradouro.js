@@ -1,6 +1,7 @@
 
 const API_URL = 'http://localhost:8080';
 var lista = []
+let listagem = '';
 
 window.onload = reset();
 
@@ -9,7 +10,13 @@ if (lista.length == 0) {
 }
 
 $("#pesquisar").click(() => {
+    if (listagem !== '') {
+        $("#dados").html('');
+        listagem = '';
+    }
+
     pesquisaLogradouro();
+
 
 });
 
@@ -59,7 +66,7 @@ function pesquisaLogradouro() {
 
 function populateTable() {
 
-    let listagem = '';
+
     console.log(lista)
     for (let i = 0; i < lista[0].length; i++) {
         listagem +=
@@ -69,8 +76,8 @@ function populateTable() {
                 <td>${lista[0][i].bairro}</td>
                 <td>${lista[0][i].localidade}</td>
                 <td>${lista[0][i].uf}</td>
-                <td>${lista[0][i].ibge}</td>
-                <td>${lista[0][i].ddd}</td>
+                <td id="oculto">${lista[0][i].ibge}</td>
+                <td id="oculto">${lista[0][i].ddd}</td>
             </tr>`
     }
     $("#dados").html(listagem);
