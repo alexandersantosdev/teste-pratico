@@ -2,7 +2,7 @@ const axios = require("axios");
 const express = require('express');
 const router = express.Router();
 
-const CEP_API = 'https://viacep.com.br/ws';
+const {CEP_API} = process.env || 'https://viacep.com.br/ws';
 
 router.get('/:cep', async (req, res) => {
 
