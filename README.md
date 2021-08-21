@@ -26,7 +26,6 @@
 ![Tela](https://github.com/alexandersantosdev/teste-pratico-vtrina/blob/main/tela.png)
 ![Tela 2](https://github.com/alexandersantosdev/teste-pratico-vtrina/blob/main/tela2.png)
 ![Tela 3](https://github.com/alexandersantosdev/teste-pratico-vtrina/blob/main/tela3.png)
-![Tela 4](https://github.com/alexandersantosdev/teste-pratico-vtrina/blob/main/tela4.png)
 ![Documentação](https://github.com/alexandersantosdev/teste-pratico-vtrina/blob/main/doc.png)
 ![Documentação 2](https://github.com/alexandersantosdev/teste-pratico-vtrina/blob/main/doc2.png)
 
