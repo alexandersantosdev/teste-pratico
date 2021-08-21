@@ -3,19 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: #cd84f1;
-}
-h3{
 
-    color: #fff;
-}
 .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.table {
-    color: #fff;
 }

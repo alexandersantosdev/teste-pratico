@@ -8,12 +8,12 @@ if (ceps.length == 0) {
     $("#dados").html("Nenhum CEP");
 }
 
-$("button").click(() => {
+$("#pesquisar").click(() => {
     pesquisaCep();
 
 });
 
-$(document).keyup( e => {
+$(document).keyup(e => {
     if ($("#cep_pesquisa").is(":focus") && (e.keyCode == 13)) {
         pesquisaCep();
     }
@@ -21,7 +21,7 @@ $(document).keyup( e => {
 
 function pesquisaCep() {
     $("#spinner").show()
-    $("button").prop("disabled", true)
+    $("#pesquisar").prop("disabled", true)
 
     const cep = $("#cep_pesquisa").val().replace(/[\.-]/g, '');
 
@@ -74,6 +74,6 @@ function reset() {
     $("#message").hide();
     $("#cep_pesquisa").val("")
     $("#cep_pesquisa").focus();
-    $("button").prop("disabled", false)
+    $("#pesquisar").prop("disabled", false)
 
 }

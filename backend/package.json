@@ -1,12 +1,12 @@
 {
-  "name": "teste-pratico-vtrina",
+  "name": "API de pesquisa de CEP",
   "version": "1.0.0",
-  "description": "API para pesquisa de CEP na VIACEP - projeto vtrina processo seletivo",
+  "description": "API para pesquisa de CEP na VIACEP - projeto vtrina segunda etapa do processo seletivo",
   "main": "index.js",
   "scripts": {
     "start:dev": "nodemon index.js",
     "start": "node index.js",
-    "swagger-autogen":"node swagger.js"
+    "swagger": "node swagger.js"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +18,8 @@
     "express": "^4.17.1",
     "swagger-autogen": "^2.11.2",
     "swagger-ui-express": "^4.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }

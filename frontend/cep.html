@@ -40,11 +40,48 @@
         </div>
     </nav>
     <div class="container mt-5">
-        <div class="mt-5" id="dados"></div>
+
+        <span class="alert alert-danger mt-5 mb-2" id="message" role="alert"></span>
+        <div class="col-6 text-center">
+            <h3 class="mt-5 text-center">Pesquisar CEP</h3>
+            <div class="input-group mt-3 mb-2">
+                <input type="text" class="form-control " id="cep_pesquisa" placeholder="ex: 83.330-100" onent>
+                <div class="input-group-append">
+
+                    <button type="button" id="pesquisar" class="btn btn-warning">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-search"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center ">
+                <div class="spinner-border text-dark mt-3 mb-3" role="status" id="spinner">
+                    <span class="visually-hidden"></span>
+                </div>
+            </div>
+        </div>
+        <table class="table table-striped table-hover mt-5">
+            <thead>
+                <tr>
+                    <th>Logradouro</th>
+                    <th>Bairro</th>
+                    <th>Localidade</th>
+                    <th>UF</th>
+                    <th>ibge</th>
+                    <th>DDD</th>
+                </tr>
+            </thead>
+            <tbody id="dados"></tbody>
+        </table>
+
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script src="js/index.js"></script>
+    <script src="js/buscacep.js"></script>
 </body>
 
 </html>

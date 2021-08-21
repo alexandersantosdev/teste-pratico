@@ -2,8 +2,8 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "REST API",
-    "description": ""
+    "title": "API de pesquisa de CEP",
+    "description": "API de pesquisa de CEP, projeto prático da segunda etapa do processo seletivo full stack Jr - vtrina 2021"
   },
   "host": "localhost:8080",
   "basePath": "/",
@@ -11,13 +11,13 @@
   "schemes": [
     "http"
   ],
-  "consumes": [],
+  "consumes": ["https://viacep.com.br/ws"],
   "produces": [],
   "paths": {
     "/buscacep/{cep}": {
       "get": {
         "tags": [],
-        "description": "",
+        "description": "Pesquisa por cep no formato: localhost:8080/buscacep/83330100",
         "parameters": [
           {
             "name": "cep",
@@ -32,6 +32,52 @@
           },
           "400": {
             "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/{uf}/{cidade}/{logradouro}": {
+      "get": {
+        "tags": [],
+        "description": "Pesquisa por estado (uf), cidade e logradouro no formato: localhost:8080/pr/piraquara/antonio, retorna uma lista de logradouros baseadas na pesquisa ou []",
+        "parameters": [
+          {
+            "name": "uf",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "cidade",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "logradouro",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "tags": [],
+        "description": "Rota raiz",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
