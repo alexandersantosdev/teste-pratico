@@ -15,6 +15,10 @@
 #### Como rodar o projeto?
     - Clonar o repositório
     - Rodar npm install / yarn na pasta backend para baixar as dependências do projeto
+    - Criar o arquivo .env na raiz da pasta backend com as variáveis:
+        - PORT=8080 (porta fixada no frontend)
+        - CEP_API=https://viacep.com.br/ws
+        
     - Rodar yarn start ou npm start na pasta backend
     - Para acessar a documentação da API acessar http://localhost:8080/doc
     - Na pasta frontend abrir o arquivo index.html
