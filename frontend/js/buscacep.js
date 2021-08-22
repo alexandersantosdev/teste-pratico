@@ -3,7 +3,7 @@ const API_URL = 'http://localhost:8080/buscacep';
 const GEO_API = "https://app.geocodeapi.io/api/v1/search?text="
 const API_KEY = "5fabbb80-0353-11ec-91c7-8d352b3d7cc7"
 
-window.onload = reset();
+document.onload = reset();
 
 $("#pesquisar").click(() => {
     pesquisaCep();
@@ -25,8 +25,9 @@ function pesquisaCep() {
     if (cep == "" || cep == null || isNaN(cep) || cep.length < 8) {
 
         $("#message").show();
+        $("#spinner").hide()
         $("#message").html("Cep inválido, preencha o campo corretamente");
-        $("#dados").html('<h3>Realize nova pesquisa</h3>')
+        $("#dados").html('<h3>Realize nova pesquisa por CEP</h3>')
         $("#map").hide();
 
     } else {
@@ -88,9 +89,9 @@ function reset() {
 
     setTimeout(() => {
         
-        $("#dados").show()
-        $("#spinner").hide()
         $("#message").hide();
+        $("#spinner").hide()
+        $("#dados").show()
         $("#cep_pesquisa").val("")
         $("#cep_pesquisa").focus();
         $("#pesquisar").prop("disabled", false)
