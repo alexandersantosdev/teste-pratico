@@ -18,6 +18,10 @@
             height: 500px;
             width: 500px;
         }
+
+        ul {
+            list-style: none;
+        }
     </style>
 </head>
 
@@ -49,7 +53,7 @@
 
         <span class="alert alert-danger mt-5 mb-2" id="message" role="alert"></span>
         <div class="col-6 text-center">
-            <h3 class="mt-5 text-center">Pesquisar CEP</h3>
+            <h3 class="mt-5 text-center">Pesquisar por CEP</h3>
             <div class="input-group mt-3 mb-2">
                 <input type="text" class="form-control " id="cep_pesquisa" placeholder="ex: 83.330-100" onent>
                 <div class="input-group-append">
@@ -70,19 +74,14 @@
                 </div>
             </div>
         </div>
-        <table class="table table-striped table-hover mt-5">
-            <thead>
-                <tr>
-                    <th>Logradouro</th>
-                    <th>Bairro</th>
-                    <th>Localidade</th>
-                    <th>UF</th>
-                    <th>ibge</th>
-                    <th>DDD</th>
-                </tr>
-            </thead>
-            <tbody id="dados"></tbody>
-        </table>
+
+
+        <div class="d-flex justify-content-center  mt-3 mb-3">
+            <div id="dados">
+                <h3>Realize uma pesquisa</h3>
+            </div>
+        </div>
+
         <div id="map"></div>
 
     </div>
@@ -93,7 +92,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByTV2aZFfrJubF6hPSox6XsIv5SQHMIrc"></script>
     <script src="js/buscacep.js"></script>
 </body>
 
