@@ -37,10 +37,8 @@ function pesquisaCep() {
                 ceps.push(response);
                 $.ajax({
                     url: `${GEO_API}${response.logradouro} ${response.localidade} ${response.uf}&apikey=${API_KEY}`, async: true, success: function (r, _) {
-                        
-                        console.log(r['features'][0]['bbox'])
+      
                         const [lat, lng] = r['features'][0]['geometry']['coordinates']
-
                         initMap(lat, lng)
                     }
                 })
