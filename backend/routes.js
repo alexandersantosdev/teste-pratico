@@ -8,7 +8,7 @@ const { CEP_API } = process.env;
 router.get('/', async (req, res) => {
     res.status(200).json(
         {
-            "message": "API de pesquisa de CEP, projeto prático da segunda etapa do processo seletivo full stack Jr - vtrina 2021",
+            "message": "Serviço de pesquisa de CEP na API VIACEP, projeto prático da segunda etapa do processo seletivo full stack Jr - vtrina 2021",
             "autor": "Alexander Roberto dos Santos",
             "rotas": {
                 "/buscacep/:cep": "pesquisa por cep",

@@ -1,6 +1,8 @@
 
 const API_URL = 'http://localhost:8080/buscacep';
 const ceps = []
+const GEO_API = "https://app.geocodeapi.io/api/v1/search?text="
+const API_KEY = "5fabbb80-0353-11ec-91c7-8d352b3d7cc7"
 
 window.onload = reset();
 
@@ -10,7 +12,6 @@ if (ceps.length == 0) {
 
 $("#pesquisar").click(() => {
     pesquisaCep();
-
 });
 
 $(document).keyup(e => {
@@ -34,6 +35,16 @@ function pesquisaCep() {
         $.ajax({
             url: `${API_URL}/${cep}`, async: true, success: function (response, _) {
                 ceps.push(response);
+                $.ajax({
+                    url: `${GEO_API}${response.logradouro} ${response.localidade} ${response.uf}&apikey=${API_KEY}`, async: true, success: function (r, _) {
+                        
+                        console.log(r['features'][0]['bbox'])
+                        const [lat, lng] = r['features'][0]['geometry']['coordinates']
+
+                        initMap(lat, lng)
+                    }
+                })
+
                 populateTable();
             },
             error: (response, s) => {
@@ -53,6 +64,14 @@ function pesquisaCep() {
     setTimeout(() => reset(), 2000)
     return
 }
+
+function initMap(lat, lng) {
+
+    const map = `<iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=${lng}~${lat}&lvl=15&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="yes">
+    </iframe>`
+    $('#map').html(map)
+}
+
 
 function populateTable() {
 

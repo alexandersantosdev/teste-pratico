@@ -2,12 +2,22 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "API de pesquisa de CEP",
-    "description": "API de pesquisa de CEP, projeto prático da segunda etapa do processo seletivo full stack Jr - vtrina 2021"
+    "title": "Serviço de pesquisa de CEP",
+    "description": "Serviço de pesquisa de CEP na API VIACEP, projeto prático da segunda etapa do processo seletivo full stack Jr - vtrina 2021",
+    "license": {
+      "name": "MIT",
+      "url": "https://spdx.org/licenses/MIT.html"
+    },
+    "contact": {
+      "name": "Alexander Roberto dos Santos",
+      "url": "https://github.com/alexandersantosdev",
+      "email": "lekxandy@hotmail.com"
+    }
+  
   },
   "host": "localhost:8080",
   "basePath": "/",
-  "tags": [],
+  "tags": ["Pesquisa de CEP ou logradouro"],
   "schemes": [
     "http"
   ],
@@ -16,8 +26,9 @@
   "paths": {
     "/buscacep/{cep}": {
       "get": {
-        "tags": [],
+        "tags": ["Pesquisa por CEP"],
         "description": "Pesquisa por cep no formato: localhost:8080/buscacep/83330100",
+        "summary":"pesquisa CEP",
         "parameters": [
           {
             "name": "cep",
@@ -38,8 +49,9 @@
     },
     "/{uf}/{cidade}/{logradouro}": {
       "get": {
-        "tags": [],
+        "tags": ["Pesquisa por logradouro"],
         "description": "Pesquisa por estado (uf), cidade e logradouro no formato: localhost:8080/pr/piraquara/antonio, retorna uma lista de logradouros baseadas na pesquisa ou []",
+        "summary":"Pesquisa logradouro",
         "parameters": [
           {
             "name": "uf",
@@ -72,8 +84,9 @@
     },
     "/": {
       "get": {
-        "tags": [],
+        "tags": ["Rota raiz da API"],
         "description": "Rota raiz",
+        "summary":"Traz info da API",
         "parameters": [],
         "responses": {
           "200": {
