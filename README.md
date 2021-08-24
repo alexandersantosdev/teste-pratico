@@ -3,14 +3,16 @@
 ### API em nodeJS que intermedia a pesquisa de CEP na API VIACEP.
     - Usando:
         - ExpressJS
+        - EJS
         - Axios
         - CORS
         - Swagger-ui e swagger-autogen
 
-    - Separada a lógica da rota em arquivo separado
+    - Lógica das rotas separadas
+    - Templates com ejs, usando partials para as partes comuns das páginas
 
 ### Frontend em html5 e bootstrap
-    - Requisições do frontend realizadas para a API em node por meio de Jquery Ajax
+    - Requisições do frontend realizadas para a API por meio de Jquery Ajax
 
 #### Como rodar o projeto?
     - Clonar o repositório
@@ -21,7 +23,7 @@
         
     - Rodar yarn start ou npm start na pasta backend
     - Para acessar a documentação da API acessar http://localhost:8080/doc
-    - Na pasta frontend abrir o arquivo index.html
+    - acessar as páginas pela endereço http://localhost:8080
 
 ![Tela](https://github.com/alexandersantosdev/teste-pratico-vtrina/blob/main/tela.png)
 ![Tela 2](https://github.com/alexandersantosdev/teste-pratico-vtrina/blob/main/tela2.png)
