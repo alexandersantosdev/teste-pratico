@@ -1,0 +1,14 @@
+body,
+html {
+    height: 100vh;
+    background-color: #bdc3c7;
+}
+
+#map {
+    height: 500px;
+    width: 500px;
+}
+
+ul {
+    list-style: none;
+}

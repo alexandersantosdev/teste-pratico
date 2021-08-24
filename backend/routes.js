@@ -4,8 +4,21 @@ const router = express.Router();
 
 const { CEP_API } = process.env;
 
-//Rota raiz
-router.get('/', async (req, res) => {
+router.get('/', (req, res) => {
+    res.render('pages/index');
+});
+
+
+router.get('/cep', (req, res) => {
+    res.render('pages/cep');
+});
+
+
+router.get('/logradouro', (req, res) => {
+    res.render('pages/logradouro');
+});
+
+router.get('/buscacep', async (req, res) => {
     res.status(200).json(
         {
             "message": "Serviço de pesquisa de CEP na API VIACEP, projeto prático da segunda etapa do processo seletivo full stack Jr - vtrina 2021",
@@ -63,13 +76,13 @@ router.get('/:uf/:cidade/:logradouro', async (req, res) => {
         const { uf, cidade, logradouro } = req.params;
         const pesquisa = `${CEP_API}/${uf}/${cidade}/${logradouro}/json`;
 
-        const response = await axios.get(pesquisa)
-        const dados = response.data
+        const response = await axios.get(pesquisa);
+        const dados = response.data;
 
-        res.status(200).json(dados)
+        res.status(200).json(dados);
 
     } catch (error) {
-        res.status(400).json({ "message": "Não foi possível encontrar o logradouro pesquisado" })
+        res.status(400).json({ "message": "Não foi possível encontrar o logradouro pesquisado" });
     }
 });
 
