@@ -84,9 +84,9 @@
     },
     "/buscacep": {
       "get": {
-        "tags": ["Rota raiz da API"],
-        "description": "Rota raiz",
-        "summary":"Traz info da API",
+        "tags": ["Rota de informações da API"],
+        "description": "Rota de informações da API",
+        "summary":"Traz infos da API",
         "parameters": [],
         "responses": {
           "200": {
