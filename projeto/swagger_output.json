@@ -82,7 +82,7 @@
         }
       }
     },
-    "/": {
+    "/buscacep": {
       "get": {
         "tags": ["Rota raiz da API"],
         "description": "Rota raiz",
